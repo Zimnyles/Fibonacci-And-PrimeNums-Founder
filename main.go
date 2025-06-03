@@ -122,7 +122,7 @@ func mainApp(w fyne.Window, login string) {
 	w.Resize(fyne.NewSize(760, 0))
 	w.SetFixedSize(true)
 
-	
+
 	usedAccount := widget.NewLabel("Вы управляете: " + login)
 
 	fibonacciStepsEntry := widget.NewEntry()
@@ -254,6 +254,7 @@ func mainApp(w fyne.Window, login string) {
 		go func() {
 			resultsChan := make(chan string)
 
+			
 			go func() {
 				for result := range resultsChan {
 					if strings.Contains(result, "Фибоначчи") {
